@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    background-color: #0b3c5d;
+    color: #ffffff;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 20px auto 0;
+    font-size: 1rem;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* PROJECTS */
+.project-card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.tools {
+    font-style: italic;
+    color: #666;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0b3c5d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* SKILLS */
+.skills-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+/* CONTACT */
+.contact-links a {
+    color: #0b3c5d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background: #e6e6e6;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
