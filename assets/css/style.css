@@ -13,19 +13,20 @@ body {
 /* HERO */
 .hero {
     display: flex;
-    flex-direction: row; /* image left, text right */
+    flex-direction: row; /* photo left, text right */
     align-items: center;
     justify-content: center;
     gap: 40px;
     background-color: #0b3c5d;
     color: #ffffff;
     padding: 70px 20px;
+    flex-wrap: wrap; /* ensures mobile responsiveness */
 }
 
 .profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* makes it circular */
+    border-radius: 50%; /* circular photo */
     object-fit: cover;  /* crops nicely */
     border: 3px solid #ffffff;
 }
@@ -121,4 +122,15 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+    }
 }
