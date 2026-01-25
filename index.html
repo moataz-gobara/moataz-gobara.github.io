@@ -5,7 +5,43 @@
     <meta charset="UTF-8">
     <title>Moataz Gobara | MEAL & Data Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Your main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Small inline styles to polish the dashboard area and spacing -->
+    <style>
+      /* Keep the dashboard close to the header, with a reasonable gap below */
+      #dashboard {
+        margin-top: 12px;
+        margin-bottom: 28px; /* reduces the large gap before Projects */
+      }
+
+      #dashboard h2 {
+        margin: 0 0 10px;
+        font-size: 1.8rem;
+      }
+
+      #dashboard iframe {
+        width: 100%;
+        height: 900px;              /* adjust if you want shorter/taller */
+        border: none;
+        border-radius: 8px;          /* subtle polish */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* soft shadow for depth */
+        background: #fff;            /* white background behind the app */
+      }
+
+      /* Make the iframe a bit shorter on smaller screens */
+      @media (max-width: 900px) {
+        #dashboard iframe {
+          height: 820px;
+        }
+      }
+      @media (max-width: 640px) {
+        #dashboard iframe {
+          height: 720px;
+        }
+      }
+    </style>
 </head>
 <body>
 
@@ -23,10 +59,13 @@
 </header>
 
 <!-- ===== Dashboard section directly under header ===== -->
-<section id="dashboard" style="margin-top: 10px; margin-bottom: 30px;">
+<section id="dashboard">
     <h2>Interactive Nutrition Dashboard</h2>
-    dashboards/nutrition_dashboard.html"
-            style="width: 100%; height: 900px; border: none; margin-top: 12px;">
+
+    <!-- Use the absolute GitHub Pages URL so it always works -->
+    <iframe
+      src="https://moataz-gobara.github.io/dashboards/nutrition_dashboard.html"
+      title="Under-5 Malnutrition (SAM & MAM) — Interactive Dashboard">
     </iframe>
 </section>
 <!-- ===== End dashboard section ===== -->
