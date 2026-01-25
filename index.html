@@ -8,33 +8,29 @@
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Small inline styles to polish spacing and the dashboard card -->
+    <!-- Small inline styles to polish spacing and keep the dashboard interactive and tidy -->
     <style>
-      /* Keep hero image styles untouched — these only affect the dashboard/projects area */
-      #projects {
-        margin-top: 28px; /* a bit of breathing room after header */
-      }
+      /* Slight breathing room between header and projects */
+      #projects { margin-top: 28px; }
 
-      /* Make the dashboard appear as the first project, with tighter spacing below it */
-      .project-card {
-        margin-bottom: 22px; /* default space between projects */
-      }
-      .project-card.dashboard-card {
-        margin-bottom: 12px; /* tighter space right under the dashboard */
-      }
+      /* Default space between projects */
+      .project-card { margin-bottom: 22px; }
+
+      /* Make the dashboard act as a project with a tighter space below it */
+      .project-card.dashboard-card { margin-bottom: 10px; }
 
       /* Dashboard iframe polish */
       .dashboard-card iframe {
         width: 100%;
-        height: 900px;           /* adjust as you like */
+        height: 900px;             /* adjust if you want shorter/taller */
         border: none;
-        border-radius: 8px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        border-radius: 8px;        /* subtle rounding */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* soft shadow */
         background: #fff;
-        display: block;          /* remove any inline gap artifacts */
+        display: block;            /* eliminates any inline-gap artifacts */
       }
 
-      /* Slightly reduce height on smaller screens so it feels tighter */
+      /* Slightly reduce iframe height on smaller screens */
       @media (max-width: 900px) {
         .dashboard-card iframe { height: 820px; }
       }
@@ -58,23 +54,29 @@
     </div>
 </header>
 
-<!-- ========== Projects section moved ABOVE and dashboard added as FIRST project ========== -->
+<!-- ========== Projects section with dashboard as first project ========== -->
 <section id="projects">
     <h2>Selected Projects</h2>
 
     <!-- 1) Interactive Nutrition Dashboard as a project card (first item) -->
     <div class="project-card dashboard-card">
-        <h3>Interactive Nutrition Dashboard (Sudan U5: SAM & MAM)</h3>
+        <h3>Interactive Nutrition Dashboard (Sudan U5: SAM &amp; MAM)</h3>
         <p>
             A fully interactive Plotly dashboard with dynamic state filtering and locality drilldown,
-            rendered with stacked bars and responsive scaling for portfolio embedding. Built in Python (Pandas + Plotly).
+            rendered with stacked bars and responsive scaling for portfolio embedding.
+            Built in Python (Pandas + Plotly).
         </p>
 
-        https://moataz-gobara.github.io/dashboards/nutrition_dashboard.html
+        <!-- Keep the dashboard interactive by embedding via iframe -->
+        <iframe
+          src="https://moataz-gobara.github.io/dashboards/nutrition_dashboard.html"
+          title="Interactive Nutrition Dashboard"
+          loading="lazy"
+          style="width: 100%; height: 900px; border: none;">
         </iframe>
     </div>
 
-    <!-- 2) Existing projects follow with their original content -->
+    <!-- 2) Existing projects -->
     <div class="project-card">
         <h3>Sudan Baseline Summary – Power BI Interactive Dashboard</h3>
         <p>
@@ -119,9 +121,9 @@
 <section id="skills">
     <h2>Core Skills</h2>
     <ul class="skills-list">
-        <li>MEAL systems & frameworks</li>
-        <li>Baseline, Endline, PDM & Needs Assessments</li>
-        <li>Power BI & data Visualization</li>
+        <li>MEAL systems &amp; frameworks</li>
+        <li>Baseline, Endline, PDM &amp; Needs Assessments</li>
+        <li>Power BI &amp; data Visualization</li>
         <li>Python (Excel automation with Pandas, Openpyxl)</li>
         <li>Advanced excel</li>
         <li>QGIS for mapping</li>
