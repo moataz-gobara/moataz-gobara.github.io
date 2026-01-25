@@ -8,38 +8,38 @@
     <!-- Your main stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Small inline styles to polish the dashboard area and spacing -->
+    <!-- Small inline styles to polish spacing and the dashboard card -->
     <style>
-      /* Keep the dashboard close to the header, with a reasonable gap below */
-      #dashboard {
-        margin-top: 12px;
-        margin-bottom: 28px; /* reduces the large gap before Projects */
+      /* Keep hero image styles untouched — these only affect the dashboard/projects area */
+      #projects {
+        margin-top: 28px; /* a bit of breathing room after header */
       }
 
-      #dashboard h2 {
-        margin: 0 0 10px;
-        font-size: 1.8rem;
+      /* Make the dashboard appear as the first project, with tighter spacing below it */
+      .project-card {
+        margin-bottom: 22px; /* default space between projects */
+      }
+      .project-card.dashboard-card {
+        margin-bottom: 12px; /* tighter space right under the dashboard */
       }
 
-      #dashboard iframe {
+      /* Dashboard iframe polish */
+      .dashboard-card iframe {
         width: 100%;
-        height: 900px;              /* adjust if you want shorter/taller */
+        height: 900px;           /* adjust as you like */
         border: none;
-        border-radius: 8px;          /* subtle polish */
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* soft shadow for depth */
-        background: #fff;            /* white background behind the app */
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        background: #fff;
+        display: block;          /* remove any inline gap artifacts */
       }
 
-      /* Make the iframe a bit shorter on smaller screens */
+      /* Slightly reduce height on smaller screens so it feels tighter */
       @media (max-width: 900px) {
-        #dashboard iframe {
-          height: 820px;
-        }
+        .dashboard-card iframe { height: 820px; }
       }
       @media (max-width: 640px) {
-        #dashboard iframe {
-          height: 720px;
-        }
+        .dashboard-card iframe { height: 720px; }
       }
     </style>
 </head>
@@ -58,21 +58,23 @@
     </div>
 </header>
 
-<!-- ===== Dashboard section directly under header ===== -->
-<section id="dashboard">
-    <h2>Interactive Nutrition Dashboard</h2>
-
-    <!-- Use the absolute GitHub Pages URL so it always works -->
-    <iframe
-      src="https://moataz-gobara.github.io/dashboards/nutrition_dashboard.html"
-      title="Under-5 Malnutrition (SAM & MAM) — Interactive Dashboard">
-    </iframe>
-</section>
-<!-- ===== End dashboard section ===== -->
-
+<!-- ========== Projects section moved ABOVE and dashboard added as FIRST project ========== -->
 <section id="projects">
     <h2>Selected Projects</h2>
 
+    <!-- 1) Interactive Nutrition Dashboard as a project card (first item) -->
+    <div class="project-card dashboard-card">
+        <h3>Interactive Nutrition Dashboard (Sudan U5: SAM & MAM)</h3>
+        <p>
+            A fully interactive Plotly dashboard with dynamic state filtering and locality drilldown,
+            rendered with stacked bars and responsive scaling for portfolio embedding. Built in Python (Pandas + Plotly).
+        </p>
+
+        https://moataz-gobara.github.io/dashboards/nutrition_dashboard.html
+        </iframe>
+    </div>
+
+    <!-- 2) Existing projects follow with their original content -->
     <div class="project-card">
         <h3>Sudan Baseline Summary – Power BI Interactive Dashboard</h3>
         <p>
@@ -111,8 +113,8 @@
             View Project on GitHub
         </a>
     </div>
-
 </section>
+<!-- =================== End Projects =================== -->
 
 <section id="skills">
     <h2>Core Skills</h2>
